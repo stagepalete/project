@@ -1,0 +1,6 @@
+<a class="card border-0 btn btn-outline-secondary" href="{% url 'gallery' slug=gallery.slug %}">
+    <img src="{{ gallery.cover.url }}" alt="" class="card-img">
+    <div class="card-body">
+        <h3 class="card-title">{{gallery.name}}</h3>
+    </div>
+</a>

@@ -1,0 +1,8 @@
+{% load static %}
+<a class="card border-0 btn btn-outline-secondary" href="{% url 'band' slug=band.slug %}">
+    <img src="{{ band.cover.url }}" alt="" class="card-img rounded-circle">
+    <div class="card-body">
+        <h5 class="fw-bold text-left m-0">{{ band.nickname }}</h5>
+        <p class="m-0">Музыкант</p>
+    </div>
+</a>

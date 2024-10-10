@@ -1,0 +1,17 @@
+{% load static %}
+<a class="card border-0 text-decoration-none" href="{% url 'event' slug=event.slug %}">
+    <div class="card-img w-100">
+        <img src="{{ event.poster.url }}" alt="" class="img-fluid rounded">
+    </div>
+    <div class="card-body mx-0 px-0">
+        <div class="card-title fw-bold">{{ event.name }}</div>
+        <div class="d-flex flex-row align-items-center">
+            <i class="fa-regular fa-calendar"></i>
+            &nbsp;&nbsp;{{event.date}} {{event.start}}
+        </div>
+        <div class="d-flex flex-row align-items-center">
+            <i class="fa-solid fa-location-dot"></i>
+            &nbsp;&nbsp;{{event.venue}}
+        </div>
+    </div>
+</a>

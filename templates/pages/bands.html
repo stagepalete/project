@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'seo' %}
+{% endblock %}
+
+{% block 'title' %}
+{% endblock %}
+
+{% block 'content' %}
+    <div class="container-fluid">
+        <section class="container">
+            <form action="" method="POST" class="d-flex flex-row justify-content-center align-items-center w-100">
+                <div class="form-group w-100">
+                    <input type="text" name="artist" id="artist" class="form-control w-100" placeholder="Поиск Музыкальной Группы" required>
+                </div>
+                <button class="btn btn-outline-dark">Поиск</button>
+            </form>
+        </section>
+        <hr>
+        <section class="container">
+            <div class="row">
+                {% for band in bands %}
+                    <div class="col-sm-2 col-md-2 col-lg-2">
+                        {% include 'blocks/band_card.html' %}
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+{% endblock %}

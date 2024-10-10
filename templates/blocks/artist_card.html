@@ -1,0 +1,14 @@
+{% load static %}
+<a class="card border-0 btn btn-outline-secondary" href="{% url 'artist' slug=artist.slug %}">
+    {% if artist.cover %}
+    <img src="{{ artist.cover.url }}" alt="" class="card-img rounded-circle" width="200px" height="200px" style="overflow: hidden;">
+    {% endif %}
+    <div class="card-body">
+        {% if artist.nickname %}
+        <h5 class="fw-bold text-left m-0">{{ artist.nickname }}</h5>
+        {% else %}
+        <h5 class="fw-bold text-left m-0">{{ artist.name }} {{ artist.lastname }}</h5>
+        {% endif %}
+        <p class="m-0">Музыкант</p>
+    </div>
+</a>
